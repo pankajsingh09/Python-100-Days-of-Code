@@ -1,0 +1,55 @@
+import random
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+my_list=[rock,paper,scissors]
+# for i in range(len(my_list)) :
+#   print(my_list[i]+"\n")
+
+#Write your code below this line 👇
+
+print("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.")
+
+user_input=int(input())
+print("You choose \n"+my_list[user_input])
+
+random_int=random.randint(0,2)
+
+print("Computer choose \n"+my_list[random_int])
+
+if(user_input==random_int):
+  print("It's Draw")
+elif ((user_input==0 and random_int==1 )or(user_input==1 and random_int==0) or (user_input==2 and random_int==1)):
+  print("You Win")
+else:
+  print("Computer Won")
+
+
+
+
+  
