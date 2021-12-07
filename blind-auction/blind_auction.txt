@@ -1,0 +1,29 @@
+from replit import clear
+#HINT: You can call clear() to clear the output in the console.
+
+import art
+
+print(art.logo)
+
+bid={}
+
+max_bid=0;
+person_name=""
+
+flag=True
+while(flag==True):
+  name=input("What is your name? ")
+  price=int(input("What is your bid  : $"))
+
+  bid[name]=price
+  if(price>max_bid):
+    person_name=name
+    max_bid=price
+  
+  other_person=input("Are there any other bidders ? Type yes or no.").lower()
+  if(other_person=='no'):
+    flag=False
+  else:
+    clear()
+
+print(f"The winner is {person_name} with a bid of ${max_bid}")
